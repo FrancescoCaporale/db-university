@@ -1,0 +1,7 @@
+1- SELECT *
+FROM students
+WHERE year(date_of_birth) = 1990
+
+2- select *
+from courses
+where cfu > 10
