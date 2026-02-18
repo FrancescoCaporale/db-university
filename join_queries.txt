@@ -1,0 +1,12 @@
+select students.*
+from students
+join degrees
+  on students.degree_id = degrees.id
+where degrees.name like '%economia%';
+
+select degrees.*
+from degrees
+join departments
+  on degrees.department_id = departments.id
+where degrees.level = 'magistrale'
+and departments.name like '%neuroscienze%';
