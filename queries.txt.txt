@@ -5,3 +5,39 @@ WHERE year(date_of_birth) = 1990
 2- select *
 from courses
 where cfu > 10
+
+3-
+select *
+from students
+where timestampdiff(year, date_of_birth, curdate()) > 30;
+
+
+4-
+select *
+from courses
+where year = 1
+and period = 'i semestre';
+
+
+5-
+select *
+from exams
+where date = '2020-06-20'
+and hour > '14:00:00';
+
+
+6-
+select *
+from degrees
+where level = 'magistrale';
+
+
+7-
+select count(*) as total_departments
+from departments;
+
+
+8-
+select count(*) as teachers_without_phone
+from teachers
+where phone is null or phone = '';
