@@ -1,12 +1,23 @@
+1-
 select students.*
 from students
 join degrees
   on students.degree_id = degrees.id
 where degrees.name like '%economia%';
 
+2-
 select degrees.*
 from degrees
 join departments
   on degrees.department_id = departments.id
 where degrees.level = 'magistrale'
 and departments.name like '%neuroscienze%';
+
+3-
+select distinct courses.*
+from courses
+join course_teacher
+  on courses.id = course_teacher.course_id
+join teachers
+  on teachers.id = course_teacher.teacher_id
+where teachers.id = 44;
